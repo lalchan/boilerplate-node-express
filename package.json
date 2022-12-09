@@ -1,0 +1,43 @@
+{
+  "name": "meropadhai-backend",
+  "version": "0.0.1-beta",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js dev",
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "api-gen": "node ./swagger.js",
+    "create-super-admin": "node ./scripts/createSuperAdmin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techclinch/meropadhai-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techclinch/meropadhai-backend/issues"
+  },
+  "homepage": "https://github.com/techclinch/meropadhai-backend#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^7.6.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "~6.6.2",
+    "morgan": "^1.10.0",
+    "multer": "1.4.5-lts.1",
+    "multer-s3": "^2.10.0",
+    "redis": "^4.5.0",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "swagger-autogen": "^2.21.5"
+  }
+}
