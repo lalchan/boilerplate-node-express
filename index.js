@@ -21,13 +21,14 @@ const server = createServer(app);
 // Get port from environment and store in Express.
 
 
-if (process.env.NODE_ENV !== 'prod') {
-	app.use(logger('dev'));
-}
+if (config.getInstance().env !== 'prod') app.use(logger('dev'))
+
 app.use(json());
 app.use(urlencoded({ extended: true }));
 app.use(cors(corsOptions))
+
 const port = config.getInstance().port || '3000';
+
 app.set('port', port);
 // implementing request handler
 app.use('*', RequestHandler.init);
