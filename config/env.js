@@ -11,6 +11,7 @@ class PrivateConfig {
     constructor() {
         this.port = process.env.PORT;
         this.allowedDomains = parseArray(process.env.ALLOWED_DOMAINS)
+        this.env = process.env.NODE_ENV
     }
 }
 class config {
