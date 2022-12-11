@@ -20,7 +20,7 @@ const server = createServer(app);
 
 // Get port from environment and store in Express.
 
-
+// use config as following config.getInstance().${key}
 if (config.getInstance().env !== 'prod') app.use(logger('dev'))
 
 app.use(json());
