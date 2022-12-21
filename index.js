@@ -6,14 +6,12 @@ import cors from 'cors'
 import mainRouter from './mainRouter.js';
 import config from './config/env.js';
 import corsOptions from './config/corsOptions.js';
+import connectDB from './config/mongodb.js';
 
-// uncomment if needed create file
-// import connectDB from './config/mongodb.js';
-// import SendGrid from '@sendgrid/mail';
-// connectDB();
 
 
 const app = express();
+connectDB();
 
 /** Create HTTP server. */
 const server = createServer(app);
